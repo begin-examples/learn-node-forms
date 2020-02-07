@@ -1,0 +1,14 @@
+{
+  "name": "begin-app",
+  "version": "0.0.0",
+  "description": "A Begin app with the minimum necessary file structure",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --serve",
+    "start": "ARC_STATIC_SPA=false npx sandbox"
+  },
+  "dependencies": {
+    "@architect/sandbox": "^1.5.8",
+    "@11ty/eleventy": "^0.10.0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@begin/data": "^1.1.4",
+    "xss": "^1.0.6"
+  }
+}
