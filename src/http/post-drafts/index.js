@@ -4,7 +4,7 @@ let drafts = require('@architect/shared/drafts')
 async function http(req) {
   if (!req.session.account) {
     return {
-      location: '/?authorized=fase'
+      location: '/?authorized=false'
     }
   }
   try {
