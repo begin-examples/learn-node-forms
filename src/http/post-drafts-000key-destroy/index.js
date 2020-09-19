@@ -4,12 +4,18 @@ let drafts = require('@architect/shared/drafts')
 async function destroy(req) {
   if (!req.session.account) {
     return {
-      location: '/admin'
+      statusCode: 303,
+      headers: {
+        location: '/admin'
+      }
     }
   }
   await drafts.destroy(req.params)
   return {
-    location: '/admin'
+    statusCode: 303,
+    headers: {
+      location: '/admin'
+    }
   }
 }
 

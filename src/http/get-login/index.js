@@ -5,13 +5,19 @@ async function login(req) {
   if (req.query.code) {
     let account = await github(req)
     return {
-      session: {account},
-      location: '/admin'
+      statusCode: 303,
+      session: { account },
+      headers: {
+        location: '/admin'
+      }
     }
   }
   else {
     return {
-      location: '/admin/?authorized=false'
+      statusCode: 401,
+      headers: {
+        location: '/admin/?authorized=false'
+      }
     }
   }
 }

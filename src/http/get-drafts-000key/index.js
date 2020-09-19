@@ -8,11 +8,18 @@ async function http(req) {
   if (req.session.account) {
     let draft = await drafts.read(req.params)
     return {
-      html: render(draft)
+      statusCode: 303,
+      headers: {
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      body: render(draft)
     }
   }
   return {
-    location: '/admin'
+    statusCode: 303,
+    headers: {
+      location: '/admin'
+    }
   }
 }
 

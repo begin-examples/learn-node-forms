@@ -7,11 +7,19 @@ async function http(req) {
   if (req.session.account) {
     let results = await drafts.read()
     return {
-      html: admin(results)
+      statusCode: 200,
+      headers: {
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      body: admin(results)
     }
   }
   return {
-    html: signin()
+    statusCode: 200,
+    headers: {
+      "Content-Type": "text/html; charset=UTF-8"
+    },
+    body: signin()
   }
 }
 

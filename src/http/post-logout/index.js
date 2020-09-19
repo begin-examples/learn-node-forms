@@ -2,8 +2,11 @@ let arc = require('@architect/functions')
 
 async function logout() {
   return {
+    statusCode: 303,
     session: {},
-    location: '/'
+    headers: {
+      location: '/'
+    }
   }
 }
 

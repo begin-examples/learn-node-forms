@@ -6,13 +6,16 @@ async function publish(req) {
 
   if (!req.session.account || !req.params.key) {
     return {
-      location: '/'
+      statusCode: 303,
+      headers: {
+        location: '/'
+      }
     }
   }
 
   try {
     let token = req.session.account.token
-    let draft = await drafts.read(req.params) 
+    let draft = await drafts.read(req.params)
 
     // publish to github
     await github({token, draft})
@@ -22,12 +25,19 @@ async function publish(req) {
 
     // go back home
     return {
-      location: '/admin'
+      statusCode: 303,
+      headers: {
+        location: '/admin'
+      }
     }
   }
   catch(e) {
     return {
-      html: `
+      status: 400,
+      headers: {
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      body: `
         <h3>${e.message}</h3>
         <pre>${e.stack}</pre>
       `

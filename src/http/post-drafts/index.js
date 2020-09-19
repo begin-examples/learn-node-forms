@@ -4,7 +4,10 @@ let drafts = require('@architect/shared/drafts')
 async function http(req) {
   if (!req.session.account) {
     return {
-      location: '/?authorized=false'
+      statusCode: 401,
+      headers: {
+        location: '/?authorized=false'
+      }
     }
   }
   try {
@@ -13,7 +16,10 @@ async function http(req) {
     draft.avatar = req.session.account.avatar
     await drafts.save(draft)
     return {
-      location: '/admin'
+      statusCode: 303,
+      headers: {
+        location: '/admin'
+      }
     }
   }
   catch(e) {
