@@ -5,3 +5,38 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/get-admin/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/get-drafts-000key/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/get-login/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/get-drafts-000key-destroy/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/get-drafts-000key-publish/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/post-drafts/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+- package-ecosystem: npm
+  directory: "/src/http/post-logout/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
