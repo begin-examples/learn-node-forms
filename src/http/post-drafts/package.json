@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@architect/functions": "^3.5.0"
+    "@architect/functions": "^4.0.0"
   }
 }
