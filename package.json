@@ -11,7 +11,7 @@
     "@architect/sandbox": "^4.0.1",
     "@11ty/eleventy": "^0.12.1",
     "@begin/data": "^3.0.0",
-    "@architect/functions": "^4.0.0",
+    "@architect/functions": "^5.0.1",
     "tiny-json-http": "^7.1.2",
     "xss": "^1.0.6"
   }
