@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@architect/sandbox": "^4.0.1",
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.1",
     "@begin/data": "^3.0.0",
     "@architect/functions": "^4.0.0",
     "tiny-json-http": "^7.1.2",
